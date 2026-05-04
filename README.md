@@ -10,13 +10,9 @@
 
 EcoTroc est une application web légère permettant aux étudiants de l'EFREI de donner ou d'échanger des objets (livres, électronique, mobilier, vêtements…) sans intermédiaire. L'accent est mis sur la **sobriété numérique** : aucune dépendance front-end externe, poids de page < 200 Ko, < 15 requêtes HTTP par page.
 
-🐈‍⬛ **Github**: https://github.com/K4rys/NumeriqueDurable
-
 🌐 **URL déployée :** https://projetnumeriquedurable-1.onrender.com/index.html
 
-
-
-📃**Rapport du projet** : [docs/Rapport_EcoTroc_TI616 grpGONCALVES JANODET--MARTY JENNEQUIN FILLIE-SANTIN EID](https://github.com/K4rys/NumeriqueDurable/blob/main/docs/Rapport_EcoTroc_TI616%20grpGONCALVES%20JANODET--MARTY%20JENNEQUIN%20FILLIE-SANTIN%20EID.pdf)
+📃**Rapport du projet** : [docs/Rapport_EcoTroc_TI616 grpGONCALVES JANODET--MARTY JENNEQUIN FILLIE-SANTIN EID](https://github.com/Axel-Janodet-Marty/ProjetNumeriqueDurable/blob/main/docs/Rapport_EcoTroc_TI616%20grpGONCALVES%20JANODET--MARTY%20JENNEQUIN%20FILLIE-SANTIN%20EID.pdf)
 
 📺**PPT de Présentation**: https://canva.link/qq8zbrvrbn7sxfc
 
@@ -28,8 +24,8 @@ EcoTroc est une application web légère permettant aux étudiants de l'EFREI de
 |--------|------|
 | Axel Janodet-Marty | Développeur Full-stack / Chef de projet |
 | Gonçalves Karys | Développeur Back-end / Base de données |
-| Rayan Eid | Tests & Documentations |
-| Baptiste Fillie-Santin | Team Leader et coordinateur |
+| Rayan Eid | Développeur Front-end  |
+| Baptiste Fillie-Santin | Team Leader |
 | Simon Jennequin-Charles |  Designer & Concept|
 
 ---
