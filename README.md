@@ -12,6 +12,9 @@ EcoTroc est une application web légère permettant aux étudiants de l'EFREI de
 
 🌐 **URL déployée :** https://projetnumeriquedurable-1.onrender.com/index.html
 
+📃**Rapport du projet** : [docs/Rapport_EcoTroc_TI616 grpGONCALVES JANODET--MARTY JENNEQUIN FILLIE-SANTIN EID](https://github.com/K4rys/NumeriqueDurable/blob/main/docs/Rapport_EcoTroc_TI616%20grpGONCALVES%20JANODET--MARTY%20JENNEQUIN%20FILLIE-SANTIN%20EID.pdf)
+
+📺**PPT de Présentation**: https://canva.link/qq8zbrvrbn7sxfc
 ---
 
 ## Équipe
