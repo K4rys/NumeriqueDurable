@@ -180,7 +180,50 @@
 
   function getFavoris(){ return JSON.parse(localStorage.getItem('ecotroc_favoris')||'[]'); }
   function isFavori(id){ return getFavoris().some(f=>f.id===id); }
+function normaliserStatut(statut){
+  return String(statut || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim();
+}
 
+function estDonne(statut){
+  return normaliserStatut(statut) === 'donne';
+}
+
+async function getFavorisNettoyes(){
+  const favoris = getFavoris();
+
+  if(!favoris.length) return [];
+
+  const favorisValides = [];
+
+  for(const favori of favoris){
+    try{
+      const res = await fetch(`/api/annonces/${favori.id}`, { cache: 'no-store' });
+
+      if(!res.ok){
+        continue;
+      }
+
+      const annonceBDD = await res.json();
+
+      if(!estDonne(annonceBDD.statut)){
+        favorisValides.push({
+          ...favori,
+          ...annonceBDD
+        });
+      }
+
+    }catch(_){
+      favorisValides.push(favori);
+    }
+  }
+
+  localStorage.setItem('ecotroc_favoris', JSON.stringify(favorisValides));
+  return favorisValides;
+}
   function toggleFavori(index){
     const a=annoncesCache[index];
     if(!a) return;
@@ -205,11 +248,12 @@
 
   /* ── Chargement des annonces ─────────────────── */
   async function chargerAnnonces(page, cat, q){
-    if(cat==='_favoris'){
-      afficherAnnonces(getFavoris());
-      afficherPagination(1,1);
-      return;
-    }
+  if(cat==='_favoris'){
+  const favoris = await getFavorisNettoyes();
+  afficherAnnonces(favoris);
+  afficherPagination(1,1);
+  return;
+}
     const params = new URLSearchParams({page});
     if(cat && cat!=='tous') params.set('categorie', cat);
     if(q) params.set('q', q);
