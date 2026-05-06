@@ -119,7 +119,6 @@ ecotroc/
 
 ---
 
----
 
 ## Métriques Green IT cibles
 
